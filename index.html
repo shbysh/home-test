@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            home
+        </title>
+        <style>
+            input[type="button"] {
+                background-color: black;
+            }
+            input[id="buttonletter"] {
+                color: white;
+            }
+        </style>
+        <script>
+            function checkPassword(){
+                var password = document.getElementById("passwordBox");
+                var passwordText = password.value;
+                if(passwordText == "1234") {
+                    window.location.href ='1.html'
+                    return true;
+                }
+                alert("틀렸습니다!");
+                return false;
+            }
+            </script>
+    </head>
+    <body>
+        <h1>
+            TITLE
+        </h1>
+        <p>
+            <p>비밀번호를 입력하세요.
+                <br>
+                <input id="passwordBox" type="password"/>
+                <input id="buttonletter" type="button" value="submit" onclick="checkPassword();" />
+                <a href="1.html" onclick="return checkPassword();">
+                </a>
+            </p>
+        </p>
+    </body>
+</html>
